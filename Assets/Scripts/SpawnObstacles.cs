@@ -6,7 +6,7 @@ using UnityEngine.Pool;
 public class SpawnObstacles : MonoBehaviour
 {
     const float y = 0.47f;
-    float startX = 13.41f;
+    float startX = 24.41f;
     float z;
     void Start()
     {
@@ -18,7 +18,7 @@ public class SpawnObstacles : MonoBehaviour
     void Update()
     {
         spawnObject();
-        startX += 4f;
+        startX += 10f;
     }
 
     void spawnObject()
