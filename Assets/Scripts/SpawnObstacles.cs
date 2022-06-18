@@ -8,10 +8,13 @@ public class SpawnObstacles : MonoBehaviour
     const float y = 0.47f;
     float startX = 24.41f;
     float z;
+    private void Awake()
+    {
+
+    }
     void Start()
     {
-    
-       
+        
     }
 
     // Update is called once per frame
