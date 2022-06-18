@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnEndless : MonoBehaviour
 {
+    public GameObject surface;
     Vector3 spawnPos;
     private void Awake()
     {
@@ -22,11 +23,8 @@ public class SpawnEndless : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject obstacle = PoolSurface.instance.getGameObject();
-        if (obstacle != null)
-        {
+            GameObject obstacle = Instantiate(surface);
             obstacle.transform.position = new Vector3(spawnPos.x,transform.parent.position.y,transform.parent.position.z) ;
             obstacle.SetActive(true);
-        }
     }
 }
