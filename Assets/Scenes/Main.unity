@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.2945918, g: 0.39826307, b: 0.5889411, a: 1}
+  m_IndirectSpecularColor: {r: 0.2946941, g: 0.39835212, b: 0.5890138, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -437,7 +437,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1724132475}
   - component: {fileID: 1724132474}
-  - component: {fileID: 1724132476}
   m_Layer: 0
   m_Name: ObjectPool
   m_TagString: Untagged
@@ -475,21 +474,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1724132476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724132473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b3d301703604bb890fdefa3027e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObjects: []
-  objectToPool: {fileID: 8088380602494360341, guid: 99f6b4b1fbda6487b97f5bb99a912153, type: 3}
-  amountToPool: 10
 --- !u!1 &1858505270
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +640,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1433849398352939558, guid: 9320f8dff85574c768aa2d098eb841a8, type: 3}
@@ -707,12 +692,14 @@ PrefabInstance:
       value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9320f8dff85574c768aa2d098eb841a8, type: 3}
 --- !u!1001 &8088380603006893178
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8088380602494360329, guid: 99f6b4b1fbda6487b97f5bb99a912153, type: 3}
@@ -764,4 +751,5 @@ PrefabInstance:
       value: Surface
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f6b4b1fbda6487b97f5bb99a912153, type: 3}
