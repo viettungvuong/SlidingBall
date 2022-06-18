@@ -6,6 +6,7 @@ public class Touch : MonoBehaviour
 {
     public GameObject player;
     float screenCenterX;
+    public float speed;
     void Start()
     {
         screenCenterX = Screen.width * 0.5f;
@@ -17,21 +18,16 @@ public class Touch : MonoBehaviour
         if (Input.touchCount > 0)
         {
             //lan dau bam
-            UnityEngine.Touch firstTouch = Input.GetTouch(0);
+            UnityEngine.Touch touch = Input.GetTouch(0);
 
             
-            if (firstTouch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Moved) //dung de drag
             {
-                if (firstTouch.position.x > screenCenterX)
-                {
-                    // ben phai
-                    player.transform.Translate(0, 0, -0.5f);
-                }
-                else if (firstTouch.position.x < screenCenterX)
-                {
-                    // ben trai
-                    player.transform.Translate(0, 0, 0.5f);
-                }
+                player.transform.position = new Vector3(
+                    player.transform.position.x,
+                    player.transform.position.y,
+                    player.transform.position.z + touch.deltaPosition.y * speed
+                    ) ;
             }
         }
 
