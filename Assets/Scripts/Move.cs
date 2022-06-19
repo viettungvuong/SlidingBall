@@ -24,7 +24,7 @@ public class Move : MonoBehaviour
         {
             speed = 6f;
         }
-        transform.Translate(new Vector3(-speed, 0, 0) * Time.deltaTime); //di chuyen player
+        transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime); //di chuyen player
     }
 
 

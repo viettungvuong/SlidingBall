@@ -7,7 +7,7 @@ public class SpawnObstacles : MonoBehaviour
 {
     const float y = -2.604645f;
     const float z = -13.85114f;
-    float startX = 27.6645f;
+    float startX = 17.6645f;
     public GameObject player;
     
     private void Awake()
@@ -23,7 +23,7 @@ public class SpawnObstacles : MonoBehaviour
     void Update()
     {
         spawnObject();
-        startX -= 10f;
+        startX -= 15f;
     }
 
     void spawnObject()
