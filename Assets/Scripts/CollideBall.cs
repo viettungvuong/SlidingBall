@@ -15,7 +15,6 @@ public class CollideBall : MonoBehaviour
     {
         
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -43,11 +42,10 @@ public class CollideBall : MonoBehaviour
                         }
                 }
                 hit = true;
-                collision.gameObject.GetComponent<Renderer>().material.color = color;
-                hit = false; //chan truong hop dung trung ma kh qua dc do dinh ti cua benk ia
+                collision.gameObject.GetComponent<Renderer>().material.color = color;     
                 this.gameObject.SetActive(false);
                 Game.score++;
-
+                hit = false; //chan truong hop dung trung ma kh qua dc do dinh ti cua ben kia
             }
             else
             {

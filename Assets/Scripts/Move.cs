@@ -14,15 +14,15 @@ public class Move : MonoBehaviour
     {
         if (Game.score <= 25)
         {
-            speed = 6f;
+            speed = 4.5f;
         }
         else if (Game.score > 25 && Game.score <= 100)
         {
-            speed = 7f;
+            speed = 5f;
         }
         else
         {
-            speed = 8f;
+            speed = 5.5f;
         }
         transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime); //di chuyen player
     }

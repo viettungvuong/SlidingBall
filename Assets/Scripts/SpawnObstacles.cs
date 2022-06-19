@@ -23,7 +23,7 @@ public class SpawnObstacles : MonoBehaviour
     void Update()
     {
         spawnObject();
-        startX -= 7f;
+        startX -= 12f;
     }
 
     void spawnObject()
@@ -63,7 +63,14 @@ public class SpawnObstacles : MonoBehaviour
                 }
                 obstacle.transform.GetChild(i).GetComponent<Renderer>().material.color = color;
             }
-           
+            int randomNoOrYes = Random.Range(0, 2); //neu ra 1 thi se co mot o bi trong
+            if (randomNoOrYes == 1)
+            {
+                int randomNo = Random.Range(0, 3);
+                obstacle.transform.GetChild(randomNo).gameObject.SetActive(false);
+                obstacle.transform.GetChild(randomNo).gameObject.GetComponent<BoxCollider>().enabled = false;
+            }
+            
         }
     }
 
