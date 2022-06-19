@@ -5,11 +5,10 @@ using UnityEngine.Pool;
 
 public class SpawnObstacles : MonoBehaviour
 {
-    const float left = -14.69f;
-    const float right = -13.51f;
-    const float y = -2.16f;
-    float startX = 15.6645f;
-    float z;
+    const float y = -2.604645f;
+    const float z = -13.85114f;
+    float startX = 27.6645f;
+    
     private void Awake()
     {
 
@@ -31,14 +30,10 @@ public class SpawnObstacles : MonoBehaviour
         GameObject obstacle = ObjectPool.instance.getGameObject();
         if (obstacle != null)
         {
-            obstacle.transform.position = new Vector3(startX, y, getZ());
+            obstacle.transform.position = new Vector3(startX, y, z);
             obstacle.SetActive(true);
         }
     }
 
-    float getZ() //tim vi tri ngang
-    {
-        return Random.Range(left,right);
-    }
  
 }
