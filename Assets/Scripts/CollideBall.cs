@@ -33,7 +33,7 @@ public class CollideBall : MonoBehaviour
                         }
                     case 1:
                         {
-                            color = Color.red;
+                            color = Color.yellow;
                             break;
                         }
                     default:
