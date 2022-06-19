@@ -20,8 +20,33 @@ public class CollideBall : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Dung");
-            Time.timeScale = 0;
+            if (collision.gameObject.GetComponent<Renderer>().material.color == GetComponent<Renderer>().material.color)
+            {
+                Color color;
+                int c = Random.Range(0, 3);
+                switch (c)
+                {
+                    case 0:
+                        {
+                            color = Color.green;
+                            break;
+                        }
+                    case 1:
+                        {
+                            color = Color.red;
+                            break;
+                        }
+                    default:
+                        {
+                            color = Color.cyan;
+                            break;
+                        }
+                }
+                collision.gameObject.GetComponent<Renderer>().material.color = color;
+                this.gameObject.SetActive(false);
+            }
+            else
+               Time.timeScale = 0;
         }
     }
 }
