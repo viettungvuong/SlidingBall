@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollideBall : MonoBehaviour
 {
-    // Start is called before the first frame update
+    static bool hit = false;
     void Start()
     {
         
@@ -42,11 +42,18 @@ public class CollideBall : MonoBehaviour
                             break;
                         }
                 }
+                hit = true;
                 collision.gameObject.GetComponent<Renderer>().material.color = color;
+                hit = false; //chan truong hop dung trung ma kh qua dc do dinh ti cua benk ia
                 this.gameObject.SetActive(false);
+                Game.score++;
+
             }
             else
-               Time.timeScale = 0;
+            {
+                if (!hit)
+                    Time.timeScale = 0;
+            }
         }
     }
 }

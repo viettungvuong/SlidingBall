@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class SpawnEndless : MonoBehaviour
 {
-    const float y = -2.63f;
-    const float z = -13.71f;
+    const float y = -1.115974f;
+    const float z = -13.68731f;
+    static float startX = -2576;
     public GameObject surface;
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Da qua");
         GameObject surfaceNew = Instantiate(surface);
-        surfaceNew.transform.position = new Vector3(transform.parent.position.x + transform.lossyScale.x, y, z);
+        surfaceNew.transform.position = new Vector3(startX, y, z);
+        startX -= 2606.38f;
     }
 
   
