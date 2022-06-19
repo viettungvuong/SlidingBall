@@ -5,8 +5,10 @@ using UnityEngine.Pool;
 
 public class SpawnObstacles : MonoBehaviour
 {
-    const float y = 0.47f;
-    float startX = 24.41f;
+    const float left = -14.69f;
+    const float right = -12.99f;
+    const float y = -2.16f;
+    float startX = 15.6645f;
     float z;
     private void Awake()
     {
@@ -21,7 +23,7 @@ public class SpawnObstacles : MonoBehaviour
     void Update()
     {
         spawnObject();
-        startX += 10f;
+        startX -= 10f;
     }
 
     void spawnObject()
@@ -36,7 +38,7 @@ public class SpawnObstacles : MonoBehaviour
 
     float getZ() //tim vi tri ngang
     {
-        return Random.Range(-11.15f, -3.03f);
+        return Random.Range(left,right);
     }
  
 }
