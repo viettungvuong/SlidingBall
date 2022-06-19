@@ -23,11 +23,9 @@ public class Touch : MonoBehaviour
             
             if (touch.phase == TouchPhase.Moved) //dung de drag
             {
-                player.transform.position = new Vector3(
-                    player.transform.position.x,
-                    player.transform.position.y,
-                    player.transform.position.z + touch.deltaPosition.y * speed
-                    ) ;
+                Vector3 touchedPos = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10));
+                // lerp and set the position of the current object to that of the touch, but smoothly over time.
+                player.transform.position = Vector3.Lerp(player.transform.position, touchedPos, Time.deltaTime);
             }
         }
 
