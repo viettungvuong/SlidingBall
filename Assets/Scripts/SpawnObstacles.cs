@@ -23,7 +23,7 @@ public class SpawnObstacles : MonoBehaviour
     void Update()
     {
         spawnObject();
-        startX -= 15f;
+        startX -= 7f;
     }
 
     void spawnObject()
