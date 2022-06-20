@@ -12,23 +12,21 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Game.score <= 25)
+        if (Game.score <= 120)
         {
-            speed = 10f;
+            speed = 9f;
         }
-        else if (Game.score > 25 && Game.score <= 100)
+        else if (Game.score > 120 && Game.score <= 360)
         {
-            speed = 13f;
+            speed = 11f;
         }
-        else
+        else if (Game.score>300)
         {
-            speed = 15f;
+            speed = 14f;
         }
-        Vector3 movement = new Vector3(-speed*Time.deltaTime, 0,0);
-
+        Vector3 movement = new Vector3(-speed*Time.deltaTime, 0, 0);
         transform.GetChild(0).GetComponent<Rigidbody>().AddForce(movement * speed);
-
-       
+        //transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime); //di chuyen player
     }
 
 

@@ -53,6 +53,8 @@ public class Touch : MonoBehaviour
 
     void checkSwipe()
     {
+        Vector3 movement = new Vector3(0, 0, 0);
+        player.GetComponent<Rigidbody>().AddForce(movement * speed);
         //Check if Vertical swipe
         if (verticalMove() > SWIPE_THRESHOLD && verticalMove() > horizontalValMove())
         {
@@ -67,8 +69,7 @@ public class Touch : MonoBehaviour
         //Check if Horizontal swipe
         else if (horizontalValMove() > SWIPE_THRESHOLD && horizontalValMove() > verticalMove())
         {
-            Vector3 movement = new Vector3(0, 0, 0);
-            player.GetComponent<Rigidbody>().AddForce(movement * speed);
+
             //Debug.Log("Horizontal");
             if (fingerDown.x - fingerUp.x > 0)//Right swipe
             {
