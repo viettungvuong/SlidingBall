@@ -21,7 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Pink
-  m_Shader: {fileID: 4800000, guid: ee7e4c9a5f6364b688a332c67fc32cca, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 095d4dbbd3ac49949a9c6812f6ef3085,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -30,8 +31,7 @@ Material:
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -42,6 +42,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Normal_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_949F1AEF:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_AF30E63B:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_EFB1826B:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -174,6 +186,19 @@ Material:
     - CurveX: 0
     - CurveY: 0
     - Normal_Blend: 0.5
+    - Vector1_283F549A: 0
+    - Vector1_3ABC7807: 0
+    - Vector1_4793473A: 0.9
+    - Vector1_4CD55FDA: 2.53
+    - Vector1_7A7E7197: 2
+    - Vector1_84D28A65: 10
+    - Vector1_9DE51220: 0
+    - Vector1_A11B8994: 0
+    - Vector1_A87DF7F3: 0
+    - Vector1_BF1CF91C: 0.9
+    - Vector1_DD1FCB98: 0
+    - Vector1_EC0C1600: 1
+    - Vector1_F7850D6A: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
@@ -219,6 +244,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_ABAAA1DA: {r: 0, g: 0, b: 0, a: 0}
+    - Vector4_29CB4192: {r: 0, g: 0, b: 0, a: 0}
     - _BASE_COLOR: {r: 0.990566, g: 0.5934051, b: 0.5934051, a: 0}
     - _BaseColor: {r: 0.16000469, g: 0.098878615, b: 0.20754719, a: 1}
     - _Color: {r: 0.49960077, g: 0.17928973, b: 0.745283, a: 1}

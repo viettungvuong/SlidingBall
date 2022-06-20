@@ -967,6 +967,7 @@ MonoBehaviour:
   scoreText: {fileID: 1850619257}
   bestText: {fileID: 1728304778}
   gameOverPanel: {fileID: 1728304777}
+  road: {fileID: 2122906277}
   player: {fileID: 666115022}
   period: 1
 --- !u!1001 &1728304773
@@ -1392,6 +1393,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2122906277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4933450338695117968, guid: 13cff12aa594347e58f713e1c0b83334,
+    type: 3}
+  m_PrefabInstance: {fileID: 4933450338693617533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4933450338693617533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1464,7 +1471,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 90747d21f7bd7453d9753c92ed72223a, type: 2}
+      objectReference: {fileID: 2100000, guid: b96e9beb3bb5cd04a8e8bec8ff280a95, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 13cff12aa594347e58f713e1c0b83334, type: 3}

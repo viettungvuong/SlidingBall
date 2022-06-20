@@ -7,7 +7,7 @@ public class Game : MonoBehaviour
 {
     public static Game instance;
     public static int score=0;
-    public GameObject scoreText, bestText, gameOverPanel;
+    public GameObject scoreText, bestText, gameOverPanel, road;
     public GameObject player;
     private float nextActionTime = 0.0f;
     public float period = 0f;
@@ -18,6 +18,8 @@ public class Game : MonoBehaviour
         instance = this;
         Application.targetFrameRate = 120;
         score = 0;
+        float c = Random.Range(0, 10.5f);
+        road.gameObject.GetComponent<Renderer>().material.SetFloat("Vector1_B4EC16BA", c);
     }
     void Start()
     {
