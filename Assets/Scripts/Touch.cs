@@ -61,10 +61,6 @@ public class Touch : MonoBehaviour
             {
                 OnSwipeUp();
             }
-            else if (fingerDown.y - fingerUp.y < 0)//Down swipe
-            {
-                OnSwipeDown();
-            }
             fingerUp = fingerDown;
         }
 
@@ -107,10 +103,7 @@ public class Touch : MonoBehaviour
         Jump();
     }
 
-    void OnSwipeDown()
-    {
-        Debug.Log("Swipe Down");
-    }
+
 
     void OnSwipeLeft()
     {

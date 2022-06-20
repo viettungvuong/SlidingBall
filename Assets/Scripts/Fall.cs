@@ -18,6 +18,6 @@ public class Fall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Time.timeScale = 0;
+        Game.instance.Lose();
     }
 }

@@ -23,7 +23,7 @@ public class CollideBall : MonoBehaviour
             if (collision.gameObject.GetComponent<Renderer>().material.color == GetComponent<Renderer>().material.color)
             {
                 Color color;
-                int c = Random.Range(0, 3);
+                int c = Random.Range(0, 7);
                 switch (c)
                 {
                     case 0:
@@ -36,6 +36,26 @@ public class CollideBall : MonoBehaviour
                             color = Color.yellow;
                             break;
                         }
+                    case 2:
+                        {
+                            color = Color.black;
+                            break;
+                        }
+                    case 3:
+                        {
+                            color = Color.red;
+                            break;
+                        }
+                    case 4:
+                        {
+                            color = Color.white;
+                            break;
+                        }
+                    case 5:
+                        {
+                            color = Color.magenta;
+                            break;
+                        }
                     default:
                         {
                             color = Color.cyan;
@@ -46,14 +66,13 @@ public class CollideBall : MonoBehaviour
                 collision.gameObject.GetComponent<Renderer>().material.color = color;
                 this.gameObject.GetComponent<Collider>().enabled = false;
                 this.gameObject.SetActive(false);
-                Game.score++;
                 hit = false; //chan truong hop dung trung ma kh qua dc do dinh ti cua ben kia
 
             }
             else
             {
                 if (!hit)
-                    Time.timeScale = 0;
+                    Game.instance.Lose();
             }
         }
     }

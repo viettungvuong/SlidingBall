@@ -33,16 +33,10 @@ public class SpawnObstacles : MonoBehaviour
         {
             obstacle.transform.position = new Vector3(startX, y, z);
             obstacle.SetActive(true);
-            bool[] used = { false, false, false };
             Color color;
             for (int i=0; i<3; i++)
             {
-                int c;
-                do
-                {
-                    c = Random.Range(0, 3);
-                } while (used[c]);
-                used[c] = true;
+                int c = Random.Range(0, 7);
                 switch (c)
                 {
                     case 0:
@@ -53,6 +47,26 @@ public class SpawnObstacles : MonoBehaviour
                     case 1:
                         {
                             color = Color.yellow;
+                            break;
+                        }
+                    case 2:
+                        {
+                            color = Color.black;
+                            break;
+                        }
+                    case 3:
+                        {
+                            color = Color.red;
+                            break;
+                        }
+                    case 4:
+                        {
+                            color = Color.white;
+                            break;
+                        }
+                    case 5:
+                        {
+                            color = Color.magenta;
                             break;
                         }
                     default:
