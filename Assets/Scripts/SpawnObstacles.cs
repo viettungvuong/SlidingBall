@@ -51,7 +51,7 @@ public class SpawnObstacles : MonoBehaviour
                         }
                     case 2:
                         {
-                            color = Color.black;
+                            color = Color.blue;
                             break;
                         }
                     case 3:

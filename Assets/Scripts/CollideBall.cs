@@ -40,7 +40,7 @@ public class CollideBall : MonoBehaviour
                         }
                     case 2:
                         {
-                            color = Color.black;
+                            color = Color.blue;
                             break;
                         }
                     case 3:
@@ -66,7 +66,7 @@ public class CollideBall : MonoBehaviour
                 }
                 hit = true;
                 collision.gameObject.GetComponent<Renderer>().material.SetColor("Color_d3f90b46fa4040c48d4031973961bef6", color);
-                collision.gameObject.GetComponent<Renderer>().material.SetColor("Color_64d861fce71044349695d1bac7f2ea98", color * 0.5f);
+                collision.gameObject.GetComponent<Renderer>().material.SetColor("Color_64d861fce71044349695d1bac7f2ea98", color * 0.9f);
 
                 hit = false; //chan truong hop dung trung ma kh qua dc do dinh ti cua ben kia
 
