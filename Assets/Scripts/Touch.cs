@@ -124,7 +124,7 @@ public class Touch : MonoBehaviour
     void Jump()
     {
         Debug.Log("Jump");
-        player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(-Move.speed/2f, 4f, 0)); //nhay len
+        player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(-Move.speed/3f, 4f, 0)); //nhay len
     }
 
 

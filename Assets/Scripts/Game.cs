@@ -13,9 +13,11 @@ public class Game : MonoBehaviour
     public float period = 0f;
     private void Awake()
     {
+        Time.timeScale = 1; //de khi replay lai
         gameOverPanel.SetActive(false);
         instance = this;
-        Application.targetFrameRate = 300;
+        Application.targetFrameRate = 120;
+        score = 0;
     }
     void Start()
     {
