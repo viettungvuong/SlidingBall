@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float speed;
+    public static float speed;
     void Start()
     { 
     }
@@ -14,17 +14,21 @@ public class Move : MonoBehaviour
     {
         if (Game.score <= 25)
         {
-            speed = 4.5f;
+            speed = 10f;
         }
         else if (Game.score > 25 && Game.score <= 100)
         {
-            speed = 5f;
+            speed = 13f;
         }
         else
         {
-            speed = 5.5f;
+            speed = 15f;
         }
-        transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime); //di chuyen player
+        Vector3 movement = new Vector3(-speed*Time.deltaTime, 0,0);
+
+        transform.GetChild(0).GetComponent<Rigidbody>().AddForce(movement * speed);
+
+       
     }
 
 

@@ -67,6 +67,8 @@ public class Touch : MonoBehaviour
         //Check if Horizontal swipe
         else if (horizontalValMove() > SWIPE_THRESHOLD && horizontalValMove() > verticalMove())
         {
+            Vector3 movement = new Vector3(0, 0, 0);
+            player.GetComponent<Rigidbody>().AddForce(movement * speed);
             //Debug.Log("Horizontal");
             if (fingerDown.x - fingerUp.x > 0)//Right swipe
             {
@@ -121,7 +123,7 @@ public class Touch : MonoBehaviour
     void Jump()
     {
         Debug.Log("Jump");
-        player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 3.5f, 0)); //nhay len
+        player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(-Move.speed/2f, 4f, 0)); //nhay len
     }
 
 
@@ -129,16 +131,20 @@ public class Touch : MonoBehaviour
     {
 
         Debug.Log("Right");
+        //Vector3 movement = new Vector3(0, 0, speed*Time.deltaTime);
+        //player.transform.GetComponent<Rigidbody>().AddForce(movement * speed);
         player.transform.position = Vector3.Lerp(player.transform.position, player.transform.position + new Vector3(0, 0, speed * Time.deltaTime), 1);
-        //player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 6, speed*Time.deltaTime)); //qua trai
+        //player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 0, speed*Time.deltaTime)); //qua trai
     }
 
     void Left()
     {
 
         Debug.Log("Left");
+        //Vector3 movement = new Vector3(0, 0, -speed * Time.deltaTime);
+        //player.transform.GetComponent<Rigidbody>().AddForce(movement * speed);
         player.transform.position=Vector3.Lerp(player.transform.position, player.transform.position + new Vector3(0, 0, -speed*Time.deltaTime), 1);
-        //player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 6, -speed * Time.deltaTime)); //nhay len
+        //player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 0, -speed * Time.deltaTime)); //nhay len
 
     }
    

@@ -22,6 +22,8 @@ public class CollideBall : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Renderer>().material.color == GetComponent<Renderer>().material.color)
             {
+                this.gameObject.GetComponent<Collider>().enabled = false;
+                this.gameObject.SetActive(false);
                 Color color;
                 int c = Random.Range(0, 7);
                 switch (c)
@@ -64,8 +66,7 @@ public class CollideBall : MonoBehaviour
                 }
                 hit = true;
                 collision.gameObject.GetComponent<Renderer>().material.color = color;
-                this.gameObject.GetComponent<Collider>().enabled = false;
-                this.gameObject.SetActive(false);
+
                 hit = false; //chan truong hop dung trung ma kh qua dc do dinh ti cua ben kia
 
             }
