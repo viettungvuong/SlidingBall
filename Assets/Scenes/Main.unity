@@ -798,8 +798,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff5ca276d07042f6b7bbad2174d4f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 100
   player: {fileID: 666115022}
+  detectSwipeOnlyAfterRelease: 1
+  SWIPE_THRESHOLD: 20
 --- !u!114 &1495795630
 MonoBehaviour:
   m_ObjectHideFlags: 0

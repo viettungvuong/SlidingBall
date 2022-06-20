@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 public class SpawnObstacles : MonoBehaviour
 {
-    const float y = -2.604645f;
+    const float y = -2.685f;
     const float z = -13.85114f;
     float startX = 17.6645f;
     public GameObject player;
