@@ -20,7 +20,7 @@ public class CollideBall : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (collision.gameObject.GetComponent<Renderer>().material.color == GetComponent<Renderer>().material.color)
+            if (collision.gameObject.GetComponent<Renderer>().material.GetColor("Color_d3f90b46fa4040c48d4031973961bef6") == GetComponent<Renderer>().material.color)
             {
                 this.gameObject.GetComponent<Collider>().enabled = false;
                 this.gameObject.SetActive(false);
@@ -65,7 +65,8 @@ public class CollideBall : MonoBehaviour
                         }
                 }
                 hit = true;
-                collision.gameObject.GetComponent<Renderer>().material.color = color;
+                collision.gameObject.GetComponent<Renderer>().material.SetColor("Color_d3f90b46fa4040c48d4031973961bef6", color);
+                collision.gameObject.GetComponent<Renderer>().material.SetColor("Color_64d861fce71044349695d1bac7f2ea98", color * 0.5f);
 
                 hit = false; //chan truong hop dung trung ma kh qua dc do dinh ti cua ben kia
 

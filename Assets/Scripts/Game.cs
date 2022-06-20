@@ -22,7 +22,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         Color color;
-        int c = Random.Range(0, 3);
+        int c = Random.Range(0, 7);
         switch (c)
         {
             case 0:
@@ -37,7 +37,7 @@ public class Game : MonoBehaviour
                 }
             case 2:
                 {
-                    color = Color.black;
+                    color = Color.blue;
                     break;
                 }
             case 3:
@@ -61,7 +61,9 @@ public class Game : MonoBehaviour
                     break;
                 }
         }
-        player.gameObject.GetComponent<Renderer>().material.color = color;
+        player.gameObject.GetComponent<Renderer>().material.SetColor("Color_d3f90b46fa4040c48d4031973961bef6", color);
+        player.gameObject.GetComponent<Renderer>().material.SetColor("Color_64d861fce71044349695d1bac7f2ea98", color * 0.5f);
+
     }
 
     // Update is called once per frame
