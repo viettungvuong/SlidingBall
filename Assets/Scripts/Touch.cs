@@ -103,7 +103,7 @@ public class Touch : MonoBehaviour
     void OnSwipeUp()
     {
         Debug.Log("Swipe UP");
-        Jump();
+        //Jump();
     }
 
 
