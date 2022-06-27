@@ -29,6 +29,7 @@ public class SpawnObstacles : MonoBehaviour
     void spawnObject()
     {
         GameObject obstacle = ObjectPool.instance.getGameObject();
+        bool[] used = { false, false, false };
         if (obstacle != null)
         {
             obstacle.transform.position = new Vector3(startX, y, z);
@@ -36,7 +37,12 @@ public class SpawnObstacles : MonoBehaviour
             Color color;
             for (int i=0; i<3; i++)
             {
-                int c = Random.Range(0, 3);
+                int c;
+                do
+                {
+                    c = Random.Range(0, 3);
+                } while (used[c]); //dam bao chi xuat hien du 3 mau, kh co cai nao trung
+                used[c] = true;
                 switch (c)
                 {
                     case 0:
@@ -58,9 +64,9 @@ public class SpawnObstacles : MonoBehaviour
                 obstacle.transform.GetChild(i).GetComponent<Renderer>().material.color = color;
             }
             int randomNoOrYes = Random.Range(0, 2); //neu ra 1 thi se co mot o bi trong
-            if (randomNoOrYes == 1)
+            if (randomNoOrYes == 1) //co 1 o trong, bay gio ta se xoa no di
             {
-                int randomNo = Random.Range(0, 3);
+                int randomNo = Random.Range(0, 3); 
                 obstacle.transform.GetChild(randomNo).gameObject.SetActive(false);
                 obstacle.transform.GetChild(randomNo).gameObject.GetComponent<BoxCollider>().enabled = false;
             }
