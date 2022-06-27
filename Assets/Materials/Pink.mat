@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Pink
-  m_Shader: {fileID: -6465566751694194690, guid: 095d4dbbd3ac49949a9c6812f6ef3085,
-    type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -31,7 +30,8 @@ Material:
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -248,7 +248,7 @@ Material:
     - Vector4_29CB4192: {r: 0, g: 0, b: 0, a: 0}
     - _BASE_COLOR: {r: 0.990566, g: 0.5934051, b: 0.5934051, a: 0}
     - _BaseColor: {r: 0.16000469, g: 0.098878615, b: 0.20754719, a: 1}
-    - _Color: {r: 0.49960077, g: 0.17928973, b: 0.745283, a: 1}
+    - _Color: {r: 0.16000465, g: 0.098878585, b: 0.20754716, a: 1}
     - _CurvedWorldBendSettings: {r: -1.31, g: 0, b: 0, a: 0}
     - _EMISSION_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

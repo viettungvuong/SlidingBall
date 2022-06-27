@@ -25,7 +25,7 @@ public class CollideBall : MonoBehaviour
                 this.gameObject.GetComponent<Collider>().enabled = false;
                 this.gameObject.SetActive(false);
                 Color color;
-                int c = Random.Range(0, 7);
+                int c = Random.Range(0, 3);
                 switch (c)
                 {
                     case 0:
@@ -38,29 +38,9 @@ public class CollideBall : MonoBehaviour
                             color = Color.yellow;
                             break;
                         }
-                    case 2:
-                        {
-                            color = Color.blue;
-                            break;
-                        }
-                    case 3:
-                        {
-                            color = Color.red;
-                            break;
-                        }
-                    case 4:
-                        {
-                            color = Color.white;
-                            break;
-                        }
-                    case 5:
-                        {
-                            color = Color.magenta;
-                            break;
-                        }
                     default:
                         {
-                            color = Color.cyan;
+                            color = Color.red;
                             break;
                         }
                 }
