@@ -14,15 +14,15 @@ public class Move : MonoBehaviour
     {
         if (Game.score <= 120)
         {
-            speed = 9f;
+            speed = 7.5f;
         }
         else if (Game.score > 120 && Game.score <= 360)
         {
-            speed = 11f;
+            speed = 8.5f;
         }
         else if (Game.score>300)
         {
-            speed = 14f;
+            speed = 10.5f;
         }
         Vector3 movement = new Vector3(-speed*Time.deltaTime, 0, 0);
         transform.GetChild(0).GetComponent<Rigidbody>().AddForce(movement * speed);

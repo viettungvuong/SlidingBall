@@ -134,7 +134,7 @@ public class Touch : MonoBehaviour
         Debug.Log("Right");
         //Vector3 movement = new Vector3(0, 0, speed*Time.deltaTime);
         //player.transform.GetComponent<Rigidbody>().AddForce(movement * speed);
-        player.transform.position = Vector3.Lerp(player.transform.position, player.transform.position + new Vector3(0, 0, speed * Time.deltaTime), 1);
+        player.transform.position = Vector3.Lerp(player.transform.position, player.transform.position + new Vector3(0, 0, speed/2f * Time.deltaTime), 1);
         //player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 0, speed*Time.deltaTime)); //qua trai
     }
 
@@ -144,7 +144,7 @@ public class Touch : MonoBehaviour
         Debug.Log("Left");
         //Vector3 movement = new Vector3(0, 0, -speed * Time.deltaTime);
         //player.transform.GetComponent<Rigidbody>().AddForce(movement * speed);
-        player.transform.position=Vector3.Lerp(player.transform.position, player.transform.position + new Vector3(0, 0, -speed*Time.deltaTime), 1);
+        player.transform.position=Vector3.Lerp(player.transform.position, player.transform.position + new Vector3(0, 0, -speed/2f*Time.deltaTime), 1);
         //player.transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 0, -speed * Time.deltaTime)); //nhay len
 
     }
